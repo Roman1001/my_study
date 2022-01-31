@@ -1,0 +1,311 @@
+# name = input("Ваше имя?\n")
+# age_str = input("Ваш возраст?\n")
+# age = int(age_str)
+#
+# print(name, age)
+#
+# # Задание 1
+# count_str = input("Сколько чашек кофе желаете приобрести?\n")
+# count = int(count_str)
+#
+# bonus = int(count / 6)
+#
+# print(bonus)
+#
+# # Задание 2
+# import math
+#
+# x1 = float(input("введите значение 'X' координаты первой точки \n"))
+# y1 = float(input("введите значение 'Y' координаты первой точки \n"))
+#
+# x2 = float(input("введите значение 'X' координаты второй точки \n"))
+# y2 = float(input("введите значение 'Y' координаты второй точки \n"))
+#
+# d = round(math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2), 3)
+#
+# print("Расстояние между координатами: ", d)
+#
+# # Задание 3
+# chicken = int(input("Введите количество кур\n")) * 2
+# pig = int(input("Введите количество свиней\n")) * 4
+# cow = int(input("Введите количество коров\n")) * 4
+#
+# summ = chicken + pig + cow
+#
+# print(summ)
+#
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# # Циклы ДЗ-1-2
+# # Задание 1
+# # Вариант 1
+# num = int(input('Введите число, количество символов \'*\'\n'))
+# start_number = 1
+# while num != 0:
+#     print(start_number * '*')
+#     num -= 1
+#     start_number += 1
+#
+# # Вариант 2
+# num = int(input('Введите число, количество символов \'*\'\n'))
+# for x in range (0, num):
+#     print('*' * (x + 1))
+#
+# # Вариант 3
+# for x in range(1, 8):
+#     print(x * "*")
+#
+# # Задание 2
+# # Вариант 1
+# num = int(input('Введите число:\n')) + 1
+# start_number = 0
+# while num != 0:
+#     if num % 2 == 0:
+#         print(f'{start_number} is EVEN')
+#     else:
+#         print(f'{start_number} is ODD')
+#     num -= 1
+#     start_number += 1
+# # Вариант 2
+# num = int(input('Введите число:\n'))
+# start_number = 0
+# for x in range(num + 1):
+#     if num % 2 == 0:
+#         print(f'{start_number} is EVEN')
+#     else:
+#         print(f'{start_number} is ODD')
+#     num -= 1
+#     start_number += 1
+#
+# # Вариант 3
+# num = int(input('Введите число:\n'))
+# for x in range(num + 1):
+#     if num % 2 == 0:
+#         print(f'{x} is EVEN')
+#     else:
+#         print(f'{x} is ODD')
+#     num -= 1
+#     x += 1
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# # Циклы ДЗ-3 Division by 3 or 5
+# # Вариант 1
+# limit = int(input('Введите число:\n'))
+# sum = 0
+# for x in range(0, limit + 1):
+#     if x % 3 == 0 or x % 5 == 0:
+#         sum += x
+#     else:
+#         continue
+# print(sum)
+# # Вариант 2
+# limit = int(input('Введите число:\n'))
+# list_numbers = [x for x in range(limit + 1) if x % 3 == 0 or x % 5 == 0]
+# total_sum = 0
+# for y in list_numbers:
+#     total_sum += y
+# print(total_sum)
+# # Вариант 3
+# limit = int(input('Введите число:\n'))
+# total_sum = sum([x for x in range(limit + 1) if x % 3 == 0 or x % 5 == 0])
+# print(total_sum)
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# # Циклы ДЗ-4 Joined List
+# # Вариант 1
+# joined_list = []
+# first_lst = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+# second_lst = [-1, -2, -3, -4, -5, -6, -7, -8, -9]
+# for x in first_lst:
+#     if x % 2 != 0:
+#         joined_list.append(x)
+#     else:
+#         continue
+# for x in second_lst:
+#     if x % 2 == 0:
+#         joined_list.append(x)
+#     else:
+#         continue
+# print(joined_list)
+# # # Вариант 2
+# first_lst = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+# second_lst = [-1, -2, -3, -4, -5, -6, -7, -8, -9]
+# first_new_list = [x for x in first_lst if x % 2 != 0]
+# second_new_list = [x for x in second_lst if x % 2 == 0]
+# joined_list = first_new_list + second_new_list
+# print(joined_list)
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# # Циклы ДЗ-5 Joined List
+# # Вариант 1
+# weight_of_cards = {
+#              2: 1, 3: 1, 4: 1, 5: 1, 6: 1,
+#              7: 0,  8: 0,  9: 0,
+#              10: -1, 'J': -1, 'Q': -1, 'K': -1, 'A': -1
+#              }
+# current_hand = [2, 3, 4, 10, 'Q', 5]
+# cards_sum = 0
+# for x in current_hand:
+#     cards_sum += weight_of_cards[x]
+# print(f'Weight of current cards is: {cards_sum}')
+# # Вариант 2
+# weight_of_cards = {
+#              2: 1, 3: 1, 4: 1, 5: 1, 6: 1,
+#              7: 0,  8: 0,  9: 0,
+#              10: -1, 'J': -1, 'Q': -1, 'K': -1, 'A': -1
+#              }
+# current_hand = [2, 3, 4, 10, 'Q', 5]
+# cards_sum = sum([weight_of_cards.get(x) for x in current_hand])
+# print(f'Weight of current cards is: {cards_sum}')
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# # Циклы ДЗ-6 - Определяем Flush
+# table_cards = ["A_S", "J_H", "7_D", "8_D", "10_D"]
+# hand_cards = ["J_D", "3_D"]
+# all_cards = table_cards + hand_cards
+#
+# suit = [x[-1] for x in all_cards]
+# if suit.count("S") >= 5:
+#     print("Flush!")
+# elif suit.count("H") >= 5:
+#     print("Flush!")
+# elif suit.count("D") >= 5:
+#     print("Flush!")
+# elif suit.count("C") >= 5:
+#     print("Flush!")
+# else:
+#     print("No Flush!")
+#
+# # S - пики (spades)
+# # H - червы (hearts)
+# # D - буби (diamonds)
+# # C - трефы (clubs)
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# # Циклы ДЗ-7 - Палиндром
+# # Вариант 1
+# number = int(input("Введите число: "))
+# len_of_number = len(str(number))
+# while len_of_number > 1:
+#     a = number // 10**(len_of_number - 1)  # первое число
+#     b = number % 10  # последнее число
+#     if a == b:
+#         number = (number - a * 10**(len_of_number - 1)) // 10  # отрезаем первое и последнее числа
+#         len_of_number -= 2
+#         if len_of_number == 0 or len_of_number == 1:
+#             print("Palindrome")
+#     else:
+#         print("No Palindrome")
+#         break
+# # Вариант 2
+# number = int(input("Введите число: "))
+# reversed_number = 0
+# tmp_original = number
+# while tmp_original > 0:
+#     reversed_number = (reversed_number * 10) + tmp_original % 10
+#     tmp_original = tmp_original // 10
+# if number == reversed_number:
+#     print("Palindrome")
+# else:
+#     print("No Palindrome")
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# # Задание - Угадай число.
+# import random
+# secret_number = random.randint(1, 50)
+# your_number = int(input("Enter your number from 1 to 50: "))
+# count = 5
+# while count > 0:
+#     if your_number == secret_number:
+#         print("Congratulations! You are winner!")
+#         break
+#     elif your_number > secret_number:
+#         print("Your number is more than computer number")
+#         your_number = int(input("Enter your number from 1 to 50: "))
+#         count -= 1
+#         if your_number == secret_number:
+#             print("Congratulations! You are winner!")
+#         elif count == 0:
+#             print(f"You are loser! My number was : {secret_number}")
+#         else:
+#             continue
+#     elif your_number < secret_number:
+#         print("Your number is less than computer number")
+#         your_number = int(input("Enter your number from 1 to 50: "))
+#         count -= 1
+#         if your_number == secret_number:
+#             print("Congratulations! You are winner!")
+#         elif count == 0:
+#             print(f"You are loser! My number was : {secret_number}")
+#         else:
+#             continue
+#     else:
+#         print("Mistake")
+#         break
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# # Задание - Игра - камни (R - rock), ножницы (S - scissors), бумага (P - paper).
+# import random
+# while exit != "no":
+#     pc_choice = random.choice("RSP")
+#     human_choice = input("Enter your choice - R - rock, or S - scissors, or P - paper: ").upper()
+#     if human_choice == "R" or human_choice == "S" or human_choice == "P":
+#         win_combinations =[("P", "S"), ("S", "R"), ("P", "S")]
+#         if (pc_choice, human_choice) in win_combinations:
+#             print(f"Congratulation! You are win! My choice was {pc_choice}")
+#             temp_exit = input(str("Do you want to try else? Yes or No? ")).lower()
+#             if temp_exit == "yes":
+#                 continue
+#             elif temp_exit == "no":
+#                 exit = temp_exit
+#                 print("See you! Goodbye!")
+#                 break
+#             else:
+#                 print("I don't understand you. Repeat please")
+#                 temp_exit = input(str("Do you want to try else? Yes or No? ")).lower()
+#                 while temp_exit != "yes" or temp_exit != "no":
+#                     if temp_exit == "yes":
+#                         break
+#                     elif temp_exit == "no":
+#                         exit = temp_exit
+#                         print("See you! Goodbye!")
+#                         break
+#                     else:
+#                         print("I don't understand you. Repeat please")
+#                         temp_exit = input(str("Do you want to try else? Yes or No? ")).lower()
+#         elif pc_choice == human_choice:
+#             print("A draw! PC has the same element!")
+#             temp_exit = input(str("Do you want to try else? Yes or No? ")).lower()
+#             if temp_exit == "yes":
+#                 continue
+#             elif temp_exit == "no":
+#                 exit = temp_exit
+#                 print("See you! Goodbye!")
+#                 break
+#             else:
+#                 print("I don't understand you. Repeat please")
+#                 temp_exit = input(str("Do you want to try else? Yes or No? ")).lower()
+#                 while temp_exit != "yes" or temp_exit != "no":
+#                     if temp_exit == "yes":
+#                         break
+#                     elif temp_exit == "no":
+#                         exit = temp_exit
+#                         print("See you! Goodbye!")
+#                         break
+#                     else:
+#                         print("I don't understand you. Repeat please")
+#                         temp_exit = input(str("Do you want to try else? Yes or No? ")).lower()
+#         else:
+#             print(f"You aren't win. My choice was {pc_choice}")
+#             temp_exit = input(str("Do you want to try else? Yes or No? ")).lower()
+#             while temp_exit != "yes" or temp_exit != "no":
+#                 if temp_exit == "yes":
+#                     break
+#                 elif temp_exit == "no":
+#                     exit = temp_exit
+#                     print("See you! Goodbye!")
+#                     break
+#                 else:
+#                     print("I don't understand you. Repeat please")
+#                     temp_exit = input(str("Do you want to try else? Yes or No? ")).lower()
+#
+#
+#
+#     else:
+#         print("Mistake, try to enter your choice!")
+#         continue
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# # Задание -
+
