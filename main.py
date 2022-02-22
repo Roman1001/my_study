@@ -326,38 +326,124 @@
 # # Задание -
 
 # # Работа с функциями:
+#
+#
+# def square(number):
+#     return pow(number, 2)
+#
+#
+# numbers = [1, 2, 3, 4, 5]
+#
+# result = map(square, numbers)
+# for x in result:
+#     print(x)
+#
+# print(list(map(square, numbers)))
+#
+#
+# def is_adult(age):
+#     return age >= 18
+#
+#
+# ages = [13, 18, 19, 16, 30]
+#
+# print(list(filter(is_adult, ages)))
+#
+# # # Лямбда выражения, функции - анонимные функции:
+#
+# is_adult_2 = lambda age: age >= 18
+#
+# print(list(filter(is_adult_2, ages)))
+#
+#
+# multiplier = lambda x, y: x*y
+#
+# print(multiplier(2, 3))
+
+# # Декораторы:
+
+# def hello():
+#     print("Hello")
+#
+#
+# hello()
+#
+#
+# def say_something(func):
+#     func()
+#
+#
+# def hello_world():
+#     print("Hello world!")
+#
+#
+# say_something(hello_world)
+
+# # Декоратор логирования начала и конца функции
 
 
-def square(number):
-    return pow(number, 2)
+# def log_decorator(func):
+#     def wrap():
+#         print(f"Calling func {func}")
+#         func()
+#         print(f"Func {func} finished its work")
+#     return wrap
+#
+#
+# # def hello():
+# #     print('Hello man!')
+#
+#
+# # wrapped_by_logger = log_decorator(hello)
+# # print(wrapped_by_logger())
+#
+# @log_decorator
+# def hello_2():
+#     print("Hello!!!")
+#
+# hello_2()
 
+# # Декоратор замера времени исполнения функции:
+#
+# from timeit import default_timer as timer
+# import math
+# import time
+#
+#
+# def measure_time(func):
+#     def inner(*args, **kwargs):  # *args, **kwargs - хитрый способ передать в функцию любые аргументы
+#         start = timer()  # замер текущего времени
+#         func(*args, **kwargs)
+#         end = timer()  # замер текущего времени
+#         print(f'Function {func.__name__} took {end - start} for execution')  # func.__name__ - передаем имя функции
+#     return inner
+#
+#
+# @measure_time
+# def factorial(num):
+#     time.sleep(3)  # замораживаем исполнение функции на 3 секунды
+#     print(math.factorial(num))
+#
+#
+# factorial(100)
 
-numbers = [1, 2, 3, 4, 5]
+# # Декоратор @wraps:
 
-result = map(square, numbers)
-for x in result:
-    print(x)
-
-print(list(map(square, numbers)))
-
-
-def is_adult(age):
-    return age >= 18
-
-
-ages = [13, 18, 19, 16, 30]
-
-print(list(filter(is_adult, ages)))
-
-# # Лямбда выражения, функции - анонимные функции:
-
-is_adult_2 = lambda age: age >= 18
-
-print(list(filter(is_adult_2, ages)))
-
-
-multiplier = lambda x, y: x*y
-
-print(multiplier(2, 3))
-
-
+# from functools import wraps
+#
+#
+# def log_decorator(func):
+#     @wraps(func)  # используем чтоб при вызове help корректно отображалось наименование функции
+#     def wrap(*args, **kwargs):
+#         print(f"Calling func {func.__name__}")
+#         func()
+#         print(f"Func {func} finished its work")
+#     return wrap
+#
+# @log_decorator
+# def hello():
+#     print('Hello man!')
+#
+#
+# hello()
+# help(hello)
