@@ -315,7 +315,49 @@
 # print(a)
 # print(b)
 # print(c)
+# Алгоритм получения цифр из n-значного числа
+# Последняя цифра - (num % pow(10, 1)) // pow(10, 0)
+# Предпоследняя цифра - (num % pow(10, 2)) // pow(10, 1)
+# Предпредпоследняя цифра - (num % pow(10, 3)) // pow(10, 2)
+# ...
+# Вторая цифра - (num % pow(10, n - 1)) // pow(10, n - 2)
+# Первая цифра - (num % pow(10, n)) // pow(10, n - 1)
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # # Задание -
+
+# # Работа с функциями:
+
+
+def square(number):
+    return pow(number, 2)
+
+
+numbers = [1, 2, 3, 4, 5]
+
+result = map(square, numbers)
+for x in result:
+    print(x)
+
+print(list(map(square, numbers)))
+
+
+def is_adult(age):
+    return age >= 18
+
+
+ages = [13, 18, 19, 16, 30]
+
+print(list(filter(is_adult, ages)))
+
+# # Лямбда выражения, функции - анонимные функции:
+
+is_adult_2 = lambda age: age >= 18
+
+print(list(filter(is_adult_2, ages)))
+
+
+multiplier = lambda x, y: x*y
+
+print(multiplier(2, 3))
 
 
