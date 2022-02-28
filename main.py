@@ -447,3 +447,28 @@
 #
 # hello()
 # help(hello)
+# # ДЗ 9 - Кто выстрелил быстрее?
+# '''
+# Два участника p1 и p2 участвуют в дуэли.
+# Напишите функцию whos_first, которая принимает две строки
+# и возвращает имя игрока, который выстрелил первым.
+# Если игроки выстрелили одновременно, то вернуть строку "tie".
+# '''
+#
+#
+# def whos_first(p1, p2):
+#     first_player = p1.find("Bang!")
+#     second_player = p2.find("Bang!")
+#     if first_player < second_player:
+#         return print(f"Win player1")
+#     elif first_player > second_player:
+#         return print(f"Win player2")
+#     elif first_player == second_player:
+#         return print("tie")
+#     else:
+#         return print("Mistake")
+#
+#
+# whos_first("    Bang!" , "     Bang!")
+
+
