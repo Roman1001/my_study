@@ -454,8 +454,7 @@
 # и возвращает имя игрока, который выстрелил первым.
 # Если игроки выстрелили одновременно, то вернуть строку "tie".
 # '''
-#
-#
+
 # def whos_first(p1, p2):
 #     first_player = p1.find("Bang!")
 #     second_player = p2.find("Bang!")
@@ -472,3 +471,9 @@
 # whos_first("    Bang!" , "     Bang!")
 
 
+# # ДЗ 10 - Ханойские башни
+
+def solve_hanoi_tower(discs):
+    if discs >= 0:
+
+    else: break
