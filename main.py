@@ -470,10 +470,19 @@
 #
 # whos_first("    Bang!" , "     Bang!")
 
+# Current time
+
+from datetime import datetime
+
+now = datetime.now()
+
+current_time = now.strftime("%H:%M:%S")
+
+print("Current time is: ", current_time)
 
 # # ДЗ 10 - Ханойские башни
 
-def solve_hanoi_tower(discs):
-    if discs >= 0:
-
-    else: break
+# def hanoi_tower(discs):
+#     if discs >= 0:
+#
+#     else: break
