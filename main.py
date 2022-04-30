@@ -519,6 +519,7 @@
 # def greetings_n(*name, m_text):  # * - для перечисления всех значений листа names
 #     for name in names:
 #         print(f"Hey {name}, {m_text}!")
+#     print("The end of function!")
 #
 #
 # names = ['Roman', 'Masha', 'Misha', 'Katya']
