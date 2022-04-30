@@ -526,6 +526,43 @@
 #
 # greetings_n(names, m_text="nice to meet you")
 
+
+# Ошибки и исключения:
+
+# while True:
+#
+#     while True:
+#         try:
+#             x = int(input("Enter first number: "))
+#         except ValueError:  # проверка x, является ли x числом
+#             print("It's not a number!")
+#             continue
+#         break
+#
+#     while True:
+#         try:
+#             y = int(input("Enter second number: "))
+#         except ValueError:  # проверка y, является ли y числом
+#             print("It's not a number!")
+#             continue
+#         break
+#
+#     print("It's equal: ", x + y)
+#
+#     print("You want to exit (y/n): ")
+#     q = input()
+#
+#     if q.lower() == 'y':
+#         print("See you bye!")
+#         break
+#     elif q.lower() == 'n':
+#         print("Nice!")
+#         continue
+#     else:
+#         print("I don't understand you! Bye!")
+#         break
+#     continue
+
 # # ДЗ 10 - Ханойские башни
 
 # def hanoi_tower(discs):
