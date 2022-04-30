@@ -472,13 +472,58 @@
 
 # Current time
 
-from datetime import datetime
+# from datetime import datetime
+#
+# now = datetime.now()
+#
+# current_time = now.strftime("%H:%M:%S")
+#
+# print("Current time is: ", current_time)
 
-now = datetime.now()
+# Работа с функциями:
 
-current_time = now.strftime("%H:%M:%S")
+# def greetings_f(name):
+#     print(f"Hey {name}!")
+#
+#
+# greetings_f("Roman")
 
-print("Current time is: ", current_time)
+
+# def greetings_s(name):
+#     hey = f"Hey {name}!"
+#     return hey
+#
+#
+# greetings_s("Masha")
+
+
+# def greetings_t(name = 'Vasya'):  # В случае если ни какой аргумент не передается, то будет выведен по default - 'Vasya'
+#     print(f"Hey {name}!")
+#
+# greetings_t()  # Выводится default аргумент 'Vasya'
+#
+#
+# names = ['Roman', 'Masha', 'Misha', 'Katya']
+# for name in names:  # выводим в цикле каждый элемент списка names
+#     greetings_t(name)
+
+
+# def greetings_n(name, m_text):
+#     print(f"Hey {name}, {m_text}!")
+#
+#
+# greetings_n("Roman", "nice to meet you")  # перевая форма записи, не защищает от изменения последовательности ввода переменных
+# greetings_n(name="Roman", m_text="nice to meet you")  # вторая форма записи, каждой переменной присваивается определенное значение
+
+
+# def greetings_n(*name, m_text):  # * - для перечисления всех значений листа names
+#     for name in names:
+#         print(f"Hey {name}, {m_text}!")
+#
+#
+# names = ['Roman', 'Masha', 'Misha', 'Katya']
+#
+# greetings_n(names, m_text="nice to meet you")
 
 # # ДЗ 10 - Ханойские башни
 
