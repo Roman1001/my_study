@@ -577,10 +577,23 @@
 # print (F(7))
 #
 # # ДЗ 10 - Ханойские башни
-
-# def hanoi_tower(discs):
-#     if discs >= 0:
+# Вариант 1
+def Hanoi(n, start, finish):  # n - число дисков, start - стартовый стержень (1), finish - последний стержень (3)
+    if n <= 0: return  # чтобы программа не зациклилась
+    temp = 6 - start - finish  # 6 - это сумма номеров стержней, три стержня - 1+2+3=6. temp = 2 - номер второго стержня
+    Hanoi(n - 1, start, temp)
+    print("Перенести диск", n, "со стержня", start, "на стержень", finish)
+    Hanoi(n - 1, temp, finish)
+Hanoi(4, 1, 3)  # 4-е диска, 3-и стержня
 #
-#     else: break
+# Вариант 2
+def hanoi_tower(discs):
+    start_kernel = 1
+    average_kernel = 2
+    finish_kernel = 3
+    if discs >= 0:
+
+        discs -= 1
+    else: break
 
 # Перевод в двоичную систему исчислений
